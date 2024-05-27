@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Short URL</h1>
+        <div id="form-container">
+            <p>Paste the URL to be shortened</p>
+            <form id="urlForm">
+                <input type="text" id="originalUrl" name="originalUrl" placeholder="Enter the link here" required>
+                <button type="submit">Shorten URL</button>
+            </form>
+            <p>ShortURL is a free tool to shorten URLs and generate short links<br>
+            URL shortener allows to create a shortened link making it easy to share</p>
+        </div>
+        <div id="loading" class="spinner" style="display: none;"></div>
+        <div id="result" style="display: none;">
+            <input type="text" id="shortUrl" readonly>
+            <button id="copyButton">Copy URL</button>
+            <p>Long URL: <span id="longUrl"></span></p>
+            <button id="clicksButton">Total of clicks of your short URL</button>
+            <button id="shortenAnotherButton">Shorten another URL</button>
+            <p>* Short URLs that do not have at least one click per month are disabled</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
