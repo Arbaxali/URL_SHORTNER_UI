@@ -8,26 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Short URL</h1>
+        <h1>URL Shortner</h1>
         <div id="form-container">
             <p>Paste the URL to be shortened</p>
             <form id="urlForm">
                 <input type="text" id="originalUrl" name="originalUrl" placeholder="Enter the link here" required>
                 <button type="submit">Shorten URL</button>
             </form>
-            <p>ShortURL is a free tool to shorten URLs and generate short links<br>
+            <p>URL Shortner is a free tool to shorten URLs and generate short links<br>
             URL shortener allows to create a shortened link making it easy to share</p>
         </div>
         <div id="loading" class="spinner" style="display: none;"></div>
         <div id="result" style="display: none;">
             <input type="text" id="shortUrl" readonly>
             <button id="copyButton">Copy URL</button>
-            <p>Long URL: <span id="longUrl"></span></p>
-            <button id="clicksButton">Total of clicks of your short URL</button>
+            <p>Long URL: <a id="longUrl" href="#" target="_blank"></a></p>
+            <!-- <button id="clicksButton">Total of clicks of your short URL</button> -->
             <button id="shortenAnotherButton">Shorten another URL</button>
-            <p>* Short URLs that do not have at least one click per month are disabled</p>
+            <p>* Short URLs will be deleted after Every 5-Days</p>
         </div>
+
+        <div id="visitorCount">visitorCount: </div>
     </div>
+
+    <footer>
+        &copy; Arbaz Ali - Hosted on Microsoft Azure 
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
